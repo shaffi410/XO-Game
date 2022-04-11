@@ -1,5 +1,5 @@
 from util.symbol_emun import Symbol
-
+from gui.board import Board
 
 class Player:
 
@@ -12,8 +12,9 @@ class Player:
         self.player_symbol: Symbol = player_symbol
 
 
-    def enter_symbol(self):
+    def enter_symbol(self, board: Board):
         return
+
 
 
 
