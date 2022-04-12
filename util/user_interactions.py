@@ -1,10 +1,7 @@
-
-MAX_BOARD_SIZE = 9
-MIN_BOARD_SIZE = 3
+import board_sizes
 
 user_interactions = dict(
-    choose_board_size=f"please choose a board size from {MIN_BOARD_SIZE} to {MAX_BOARD_SIZE}"
-                      f" - Only ODD Numbers Please!",
+    choose_board_size=f"please choose a board size from {board_sizes.MIN_BOARD_SIZE} to {board_sizes.MAX_BOARD_SIZE}",
     invalid_board_size="Sorry the number you have entered is not valid",
     choose_board_slot="please choose a valid slot",
     slot_is_taken="Sorry, Slot is taken",

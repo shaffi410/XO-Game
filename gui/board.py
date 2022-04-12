@@ -1,5 +1,4 @@
 import numpy as np
-
 from util.symbol_emun import Symbol
 
 
@@ -14,9 +13,12 @@ class Board:
         self.board: np = np.zeros(shape=(self.board_size, self.board_size), dtype=int)
         self.board_occupied_slots: int = 0
 
-    def enter_symbol(self, symbol: Symbol, player_input_x: int, player_input_y: int):
+    def set_slot(self, symbol: Symbol, player_input_x: int, player_input_y: int):
         self.board[player_input_x][player_input_y].append(symbol)
         self.board_occupied_slots += 1
+
+    def get_slot(self, x_pos: int, y_pos: int):
+        return self.board[x_pos, y_pos]
 
     def print_board(self):
         for i in range(self.board_size):
@@ -31,6 +33,4 @@ class Board:
                     print("_", end="")
                     if k == self.board_size * 2:
                         print("_", end="\n")
-
-
 

@@ -1,7 +1,10 @@
+from util import user_interactions
+from infra.orchestrator import Orchestrator
 
 
 def start_game():
-    board_size = input("ple")
+    ocrchestrator = Orchestrator()
+    ocrchestrator.game_loop()
 
 if __name__ == '__main__':
     start_game()
